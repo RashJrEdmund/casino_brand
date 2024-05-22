@@ -7,29 +7,39 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255; */
 
+  --text: #fff;
+
   /* TAILWIND EXTENSION OF COLORS */
 
   --app-gold-500: #feaf0f;
   --app-red-500: #cc2131;
   --app-purple-500: #3e0f36;
+  --app-purple-400: #35082b;
+
+  /* TAILWIND EXTENSION OF SPACING */
+
+  --app-max-w: 1900px;
+  --app-dynamic-max-w: min(var(--app-max-w), 97vw);
 }
 
 @media (prefers-color-scheme: dark) {
   /* :root {
     --foreground-rgb: 255, 255, 255;
+    --text: #fff;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   } */
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  color: var(--text);
+  background-color: var(--app-purple-400);
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
 @layer utilities {
@@ -50,8 +60,13 @@ a {
   cursor: pointer;
 }
 
-/* button {
+button {
   cursor: pointer;
   border: none;
   background: none;
-} */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

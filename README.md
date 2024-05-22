@@ -20,4 +20,4 @@ npm run dev
 
 ## Live vercel deployment
 
-coming soon...
+[Casino brand](https://casino-brand.vercel.app/)

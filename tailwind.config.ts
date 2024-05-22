@@ -23,7 +23,14 @@ const config: Config = {
         },
         "app-purple": {
           500: "var(--app-purple-500)",
+          400: "var(--app-purple-400)",
         },
+      },
+      spacing: {
+        17: "4.5rem",
+        21: "5.5rem", // since 20 is 5rem
+        "app-max-w": "var(--app-max-w)",
+        "app-dynamic-max-w": "var(--app-dynamic-max-w)",
       }
     },
   },
