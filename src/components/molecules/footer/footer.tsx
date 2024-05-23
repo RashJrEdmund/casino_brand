@@ -9,7 +9,7 @@ export default function Footer() {
           <div>
             <ImageLogo className="mb-4" />
 
-            <p className="max-w-[400px] sm:font-semibold text-xl">
+            <p className="max-w-[400px] break-all text-center sm:text-left sm:font-semibold text-xl">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti atque accusantium blanditiis quibusdam molestias natus ipsum odit, sed praesentium facilis.
             </p>
           </div>
@@ -21,10 +21,10 @@ export default function Footer() {
           <form className="w-full max-w-[400px] rounded-2xl border border-app-gold-500 flex flex-nowrap">
             <input
               placeholder="Enter Your Email Address"
-              className="w-full border-0 bg-transparent p-4 py-5 outline-none rounded-[inherit]"
+              className="w-full border-0 bg-transparent p-2 md:p4 py-4 md:py-5 outline-none rounded-[inherit]"
             />
 
-            <Button className="rounded-[inherit]">Subscribe</Button>
+            <Button className="rounded-[inherit] px-5">Subscribe</Button>
           </form>
         </div>
       </div>

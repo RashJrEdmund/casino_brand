@@ -1,4 +1,3 @@
-import { waitAndResolve } from "@/lib/utils";
 import type { Game } from "./types";
 import { APP_ICONS } from "@/components/primitive";
 
@@ -53,8 +52,8 @@ const DummyGames: Game[] = [
   },
 ];
 
-const getTopGames = (): Promise<Game[]> => {
-  return waitAndResolve<Game[]>(DummyGames, 1400); // intentionally adding loading time so as for show shimmer.
+const getTopGames = (): Game[] => {
+  return DummyGames;
 };
 
 export {

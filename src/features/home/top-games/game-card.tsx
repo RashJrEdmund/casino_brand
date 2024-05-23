@@ -1,45 +1,38 @@
 import { Button } from "@/components/atoms/Button";
 import { type Game } from "../api/types";
-import "./game-card.css";
+import Link from "next/link";
 
 interface Props {
   game: Game;
 }
 
-function GameCardShimmer() {
-  return (
-    <>
-      {
-        Array.from({ length: 8 }, (_, i) => i).map((num) => (
-          <div key={num} className="w-full max-w-[min(350px,_97vw)] h-[min(65vh,_400px)] rounded-2xl bg-[#cfc6c69f] mx-auto animate-pulse" />
-        ))
-      }
-    </>
-  );
-}
-
 function GameCard({ game }: Props) {
   return (
     <div
-      className="game-card"
+      className="group relative w-full max-w-[min(365px,_90vw)] min-h-[min(65vh,_400px)] flex flex-col items-center justify-end mx-auto rounded-2xl bg-center bg-cover first-of-type:bg-contain bg-no-repeat bg-app-purple-500 border border-transparent transition duration-300 hover:border-app-gold-500 before:content-[''] before:absolute before:top-0 before:left-0 before:rounded-[inherit] before:w-full before:h-full before:bg-transparent hover:before:bg-game-card-grad"
       style={{
         backgroundImage: `URL(${game.coverImage})`
       }}
     >
-      <div className="game-card__text-container">
-        <h4>{game.title}</h4>
+      <div className="flex flex-col items-center justify-center gap-2 mb-14 opacity-0 transition duration-300 text-center group-hover:opacity-100 z-[5]">
+        <h4 className="font-semibold text-[2rem]">
+          {game.title}
+        </h4>
 
-        <p className="text-app-gold-500">{game.stake}</p>
+        <p className="text-app-gold-500 font-semibold text-[1.3rem] mb-4">
+          {game.stake}
+        </p>
 
-        <Button className="text-white px-14">
-          Pay Now
-        </Button>
+        <Link href="#pricing" className="w-fit">
+          <Button className="text-white px-14">
+            Pay Now
+          </Button>
+        </Link>
       </div>
     </div>
   );
 };
 
 export {
-  GameCardShimmer,
   GameCard,
 };

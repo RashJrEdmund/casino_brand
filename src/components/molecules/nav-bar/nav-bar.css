@@ -18,10 +18,10 @@
 
     .nav-container__nav-links {
       /**
-        adding 3vw because the parent has a max-width of 97vw, so the I have to add the remaining 3vh to it's width before it reaches the edges of the screen
+        adding 3vw because the parent has a max-width of 95vw, so the I have to add the remaining 10vh to it's width before it reaches the edges of the screen
         this also affect's how It transform: translate it;
       */
-      width: calc(100% + 3vw);
+      width: calc(100% + 14vw); /* adding more to make sure it spreads */
       height: fit-content;
       position: absolute;
       /* with respect to .nav-bar__container */
@@ -35,13 +35,13 @@
       gap: 1rem;
       transition: transform 300ms;
       background-color: var(--app-purple-500);
-      transform: translate(-1.5vw, -110%);
+      transform: translate(-5vw, -110%);
       z-index: 8;
 
       &.__nav-links--active {
         /* for when it's open */
         top: 100%;
-        transform: translate(-1.5vw, 0);
+        transform: translate(-5vw, 0);
         z-index: 11;
         padding: 1rem 1rem 1.9rem;
       }

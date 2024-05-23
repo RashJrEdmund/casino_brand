@@ -1,22 +1,8 @@
-import { getTestimonials } from "../api/testimonials.endpoints";
-import { Testimonial, TestimonialShimmer } from "./testimonial";
-import { Suspense } from "react";
-
-async function LoadTestimonials() {
-  const testimonials = await getTestimonials();
-
-  return (
-    <>
-      {
-        testimonials.map((testimony) => (
-          <Testimonial key={testimony.id} testimony={testimony} />
-        ))
-      }
-    </>
-  );
-}
+import { getTestimonials } from "../api/testimonial-data";
+import { Testimonial } from "./testimonial";
 
 export default async function Testimonials() {
+  const testimonials = getTestimonials();
 
   return (
     <div id="testimonials" className="w-full h-fit py-8 pb-16 mt-8 bg-app-purple-400">
@@ -29,10 +15,12 @@ export default async function Testimonials() {
           <p className="md:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique adipisci repellat tempore unde voluptatem quisquam!</p>
         </div>
 
-        <div className="w-full flex flex-wrap items-start justify-evenly gap-4 mt-8">
-          <Suspense fallback={<TestimonialShimmer />}>
-            <LoadTestimonials />
-          </Suspense>
+        <div className="w-full flex flex-wrap items-start justify-evenly gap-4 gap-y-8  mt-8">
+          {
+            testimonials.map((testimony) => (
+              <Testimonial key={testimony.id} testimony={testimony} />
+            ))
+          }
         </div>
       </div>
     </div>

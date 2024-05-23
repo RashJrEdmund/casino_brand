@@ -5,16 +5,6 @@ function cn(...inputs: ClassValue[]) { // cn for class names
   return twMerge(clsx(inputs));
 };
 
-// simple function to simulate search
-function waitAndResolve<T>(data: T, time = 500) {
-  return new Promise<T>((resolve) => {
-    setTimeout(() => {
-      resolve(data)
-    }, time);
-  });
-}
-
 export {
   cn,
-  waitAndResolve,
-}
+};

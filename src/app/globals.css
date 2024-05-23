@@ -37,7 +37,7 @@ html {
 
 @media only screen and (max-width: 1300px) {
   :root {
-    --app-dynamic-max-w: min(var(--app-max-w), 97vw);
+    --app-dynamic-max-w: min(var(--app-max-w), 90vw);
   }
 }
 

@@ -15,6 +15,11 @@ const APP_ICONS = {
   star: "⭐",
 };
 
+const SPINNING_WHEEL = {
+  wheel: "/icons/wheel-group-wheel.svg",
+  pointer: "/icons/wheel-group-pointer.svg"
+};
+
 const APP_PROFILES = {
   aang: "/profiles/aang.jpg",
   madara: "/profiles/madara.jpg",
@@ -26,4 +31,5 @@ const APP_PROFILES = {
 export {
   APP_ICONS,
   APP_PROFILES,
+  SPINNING_WHEEL,
 };

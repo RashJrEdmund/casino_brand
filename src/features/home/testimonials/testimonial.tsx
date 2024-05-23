@@ -2,31 +2,6 @@ import Image from "next/image";
 import type { Testimony } from "../api/types";
 import { APP_ICONS } from "@/components/primitive";
 
-function TestimonialShimmer() {
-  return (
-    <>
-      {
-        Array.from({ length: 2 }, (_, i) => i).map((num) => (
-          <div key={num} className="w-full sm:min-w-[360px] max-w-[600px] flex flex-col gap-4 items-start justify-center  py-10 px-8 rounded-xl bg-[#cfc6c69f] mx-auto animate-pulse">
-
-            <div className="w-full flex items-center justify-start gap-4">
-              <div
-                className="rounded-full object-cover object-center w-[100px] h-[100px] bg-[#cfc6c6bd]"
-              />
-
-              <div className="w-[85%]  bg-[#cfc6c6bd] p-8" />
-            </div>
-
-            <div
-              className="w-full h-[100px] bg-[#cfc6c6bd]"
-            />
-          </div>
-        ))
-      }
-    </>
-  );
-}
-
 function Testimonial({ testimony }: { testimony: Testimony }) {
   const { name, profilePic, favoriteGamer, expression, rating, updatedAt } = testimony;
 
@@ -52,7 +27,7 @@ function Testimonial({ testimony }: { testimony: Testimony }) {
         </div>
       </div>
 
-      <p className="sm:font-semibold sm:text-xl">
+      <p className="sm:font-semibold sm:text-xl break-all">
         {expression}
       </p>
 
@@ -78,6 +53,5 @@ function Testimonial({ testimony }: { testimony: Testimony }) {
 }
 
 export {
-  TestimonialShimmer,
   Testimonial,
 };
