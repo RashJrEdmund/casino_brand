@@ -31,7 +31,7 @@ const PriceTiers: Pricing[] = [
 
 export default function Pricing() {
   return (
-    <div className="w-full h-fit py-8 pb-16 mt-16 bg-app-purple-500">
+    <div id="pricing" className="w-full h-fit py-8 pb-16 mt-16 bg-app-purple-500">
       <div className="w-full max-w-app-dynamic-max-w min-h-app-section-min-w mx-auto flex flex-col items-center gap-8">
         <div className="w-full text-center">
           <h2 className="font-extrabold text-3xl md:text-5xl">

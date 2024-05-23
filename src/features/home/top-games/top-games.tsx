@@ -18,7 +18,7 @@ async function GamesCards() {
 
 export default function TopGames() {
   return (
-    <div className="w-full h-fit py-4 lg:pt-21 bg-app-purple-400">
+    <div id="games" className="w-full h-fit py-4 lg:pt-21 bg-app-purple-400">
       <div className="w-full max-w-app-dynamic-max-w min-h-app-section-min-w mx-auto flex flex-col items-center gap-8">
         <div className="w-full text-center">
           <h2 className="font-extrabold text-3xl md:text-5xl">

@@ -6,7 +6,7 @@ import Testimonials from "./testimonials/testimonials";
 
 export function HomePage() {
   return (
-    <main className="w-full h-fit min-h-screen flex flex-col items-center justify-start">
+    <main id="home" className="w-full h-fit min-h-screen flex flex-col items-center justify-start">
       <Banner />
 
       <About />
