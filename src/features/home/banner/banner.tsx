@@ -34,7 +34,7 @@ function MoreCTA() {
 export default function Banner() {
   return (
     <div className="lg:relative w-full h-fit pt-20 mt-8 pb-21">
-      <div className="w-full max-w-app-dynamic-max-w mx-auto lg:py-4 flex items-center justify-around">
+      <div className="w-full max-w-app-dynamic-max-w mx-auto lg:py-4 flex flex-col-reverse md:flex-row items-center justify-around">
         <div className="w-full h-full min-h-app-section-min-h flex basis-auto flex-col justify-start gap-8 md:gap-4">
           <h1 className="font-extrabold text-xl sm:text-3xl md:text-5xl lg:text-7xl leading-8 sm:leading-[3rem] md:leading-[4.5rem] lg:leading-[7rem] xl:leading-[7rem] max-w-[900px]">
             Win Unlimited Money By Playing Online Casino Games
@@ -44,12 +44,12 @@ export default function Banner() {
             play casino and earn cash, all online, on this platform (the ultimate casino platform)
           </p>
 
-          <Button className="w-full md:max-w-[450px] mt-4 animate-pulse">
+          <Button className="w-full md:max-w-[450px] my-8 md:mt-4 animate-pulse">
             Play Now!
           </Button>
         </div>
 
-        <div className="w-full max-w-[650px] shrink hidden md:inline">
+        <div className="w-full max-w-[650px] shrink">
           <Image
             src={APP_ICONS.bannerThumb}
             width={500}
