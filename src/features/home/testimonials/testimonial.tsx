@@ -69,7 +69,7 @@ function Testimonial({ testimony }: { testimony: Testimony }) {
           }
         </div>
 
-        <span className="sm:font-semibold text-xl text-nowrap">
+        <span className="font-light sm:font-semibold sm:text-xl text-nowrap">
           {updatedAt}
         </span>
       </div>

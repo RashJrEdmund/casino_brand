@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    description: "Casino home page. A take home assessment",
+    description: "Casino home page. A take home assessment for a casino brand",
     siteName: "Casino brand",
     title: "Casino brand",
   },

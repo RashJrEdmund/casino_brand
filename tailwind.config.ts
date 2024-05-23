@@ -33,7 +33,7 @@ const config: Config = {
         21: "5.5rem", // since p-20 is 5rem
         "app-max-w": "var(--app-max-w)",
         "app-dynamic-max-w": "var(--app-dynamic-max-w)",
-        "app-section-min-w": "var(--app-section-min-w)",
+        "app-section-min-h": "var(--app-section-min-h)",
       }
     },
   },

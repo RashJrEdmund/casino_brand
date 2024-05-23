@@ -42,7 +42,7 @@ const TestimonialDummyData: Testimony[] = [
 ];
 
 const getTestimonials = (): Promise<Testimony[]> => {
-  return waitAndResolve(TestimonialDummyData, 4000);
+  return waitAndResolve(TestimonialDummyData, 3000); // intensionally setting load time to 3 seconds to show schema
 };
 
 export {

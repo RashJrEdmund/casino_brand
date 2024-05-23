@@ -10,6 +10,8 @@ const APP_ICONS = {
   pool1: "/icons/pool1.jpg",
   pool2: "/icons/pool2.png",
   bannerThumb: "/icons/banner-thumb.png",
+  menu: "/icons/menu.svg",
+  close: "/icons/close.svg",
   star: "⭐",
 };
 

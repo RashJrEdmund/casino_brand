@@ -1,5 +1,7 @@
-"use client"; // making component a client component so as to use browser and react hooks to track navigation, and update the display state of the nav list
+"use client"; // making component a client component so as to use browser and react hooks to track navigation, and update the display state of the nav list and also toggle nav bar open or close
 
+import { APP_ICONS } from "@/components/primitive";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -16,9 +18,11 @@ function NavLinks() {
   ));
 
   const [activeRoute, setActiveRoute] = useState<Route>("Home");
+  const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
 
   const handleRoute = (route: Route) => {
     setActiveRoute(route);
+    setIsNavOpen(false);
 
     if (typeof Storage === "undefined") return;
 
@@ -36,21 +40,39 @@ function NavLinks() {
   }, []);
 
   return (
-    <ul className="w-full items-center justify-end gap-4 hidden sm:flex">
-      {
-        NavBarList.map(({ href, text }) => (
-          <li key={text} className="font-semibold text-xl  p-0">
-            <Link
-              href={href}
-              onClick={() => handleRoute(text)}
-              className={`w-full m-0 p-0 ${activeRoute === text ? "text-app-gold-500" : ""}`}
+    <>
+      {isNavOpen ? (
+        <div className="overlay" onClick={() => setIsNavOpen(false)} />
+      ) : null}
+
+      <ul className={`nav-container__nav-links ${isNavOpen ? "__nav-links--active" : ""}`}>
+        {
+          NavBarList.map(({ href, text }) => (
+            <li
+              key={text}
+              className={`nav-link ${activeRoute === text ? "nav-link--active" : ""}`}
             >
-              {text}
-            </Link>
-          </li>
-        ))
-      }
-    </ul>
+              <Link
+                href={href}
+                onClick={() => handleRoute(text)}
+                className="link"
+              >
+                {text}
+              </Link>
+            </li>
+          ))
+        }
+      </ul>
+
+      <Image
+        src={isNavOpen ? APP_ICONS.close : APP_ICONS.menu}
+        width={40}
+        height={40}
+        alt="menu icon"
+        className="sm:hidden font-bold cursor-pointer"
+        onClick={() => setIsNavOpen((prev) => !prev)}
+      />
+    </>
   );
 }
 

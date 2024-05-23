@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function About() {
   return (
     <div id="about" className="w-full h-fit py-4 lg:pt-21 bg-app-purple-500">
-      <div className="w-full max-w-app-dynamic-max-w min-h-app-section-min-w mx-auto flex items-start justify-around gap-4">
+      <div className="w-full max-w-app-dynamic-max-w min-h-app-section-min-h mx-auto flex items-start justify-around gap-4">
         <div className="w-full">
           <h2 className="font-extrabold text-3xl md:text-5xl leading-8 md:leading-[4.5rem] pb-6">
             About our <span className="text-app-gold-500">Casino brand</span>

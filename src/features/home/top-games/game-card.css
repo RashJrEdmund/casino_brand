@@ -1,6 +1,6 @@
 .game-card {
   width: 100%;
-  max-width: 350px;
+  max-width: min(350px, 97vw);
   min-height: min(65vh, 400px);
   display: flex;
   flex-direction: column;

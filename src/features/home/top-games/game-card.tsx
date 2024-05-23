@@ -10,8 +10,8 @@ function GameCardShimmer() {
   return (
     <>
       {
-        Array.from({ length: 6 }, (_, i) => i).map((num) => (
-          <div key={num} className="w-full max-w-[350px] h-[min(65vh,_400px)] rounded-2xl bg-[#cfc6c69f] mx-auto animate-pulse" />
+        Array.from({ length: 8 }, (_, i) => i).map((num) => (
+          <div key={num} className="w-full max-w-[min(350px,_97vw)] h-[min(65vh,_400px)] rounded-2xl bg-[#cfc6c69f] mx-auto animate-pulse" />
         ))
       }
     </>

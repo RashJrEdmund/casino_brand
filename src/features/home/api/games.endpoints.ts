@@ -54,7 +54,7 @@ const DummyGames: Game[] = [
 ];
 
 const getTopGames = (): Promise<Game[]> => {
-  return waitAndResolve<Game[]>(DummyGames, 1000);
+  return waitAndResolve<Game[]>(DummyGames, 1400); // intentionally adding loading time so as for show shimmer.
 };
 
 export {

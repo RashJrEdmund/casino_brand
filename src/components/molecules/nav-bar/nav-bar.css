@@ -1,0 +1,111 @@
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--app-purple-500);
+  z-index: 10;
+
+  .nav-bar__container {
+    width: 100%;
+    max-width: var(--app-dynamic-max-w);
+    margin: 0 auto;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    .nav-container__nav-links {
+      /**
+        adding 3vw because the parent has a max-width of 97vw, so the I have to add the remaining 3vh to it's width before it reaches the edges of the screen
+        this also affect's how It transform: translate it;
+      */
+      width: calc(100% + 3vw);
+      height: fit-content;
+      position: absolute;
+      /* with respect to .nav-bar__container */
+      top: 0;
+      left: 0;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      transition: transform 300ms;
+      background-color: var(--app-purple-500);
+      transform: translate(-1.5vw, -110%);
+      z-index: 8;
+
+      &.__nav-links--active {
+        /* for when it's open */
+        top: 100%;
+        transform: translate(-1.5vw, 0);
+        z-index: 11;
+        padding: 1rem 1rem 1.9rem;
+      }
+
+      .nav-link {
+        text-align: center;
+        width: 100%;
+        font-weight: 600;
+        height: fit-content;
+
+        .link {
+          outline: 1px solid var(--app-gold-500);
+          display: inline-block;
+          width: 100%;
+          padding: 0.8rem;
+        }
+
+        &.nav-link--active {
+          background-color: var(--app-gold-500);
+          color: #fff;
+        }
+      }
+
+      @media (min-width: 640px) {
+        position: unset;
+        transform: translate(0, 0);
+        width: fit-content;
+        flex-direction: row;
+        justify-content: end;
+
+        .nav-link {
+          padding: 0;
+          width: fit-content;
+          font-size: 1.25rem;
+          line-height: 1.75rem;
+
+          .link {
+            outline: none;
+            padding: 0;
+          }
+
+          &.nav-link--active {
+            background-color: transparent;
+            color: var(--app-gold-500);
+          }
+        }
+      }
+    }
+
+    .overlay {
+      position: fixed;
+      top: 160px;
+      left: 0;
+      background: linear-gradient(135deg, #00000062, #00000062);
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+    }
+  }
+
+
+  @media (min-width: 768px) {
+    .nav-bar__container {
+      padding: 1.5rem 0;
+    }
+  }
+}
