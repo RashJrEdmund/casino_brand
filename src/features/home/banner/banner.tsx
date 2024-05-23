@@ -17,7 +17,7 @@ function MoreCTA() {
 
             <div className="w-full flex flex-col items-start text-left">
               <h3 className="font-bold text-xl">
-                Sign Up First & Login
+                Lorem, ipsum dolor.
               </h3>
 
               <p className="font-light">
@@ -51,7 +51,7 @@ export default function Banner() {
 
         <div className="w-full max-w-[650px] shrink hidden md:inline">
           <Image
-            src={APP_ICONS.wheelOfFortune}
+            src={APP_ICONS.bannerThumb}
             width={500}
             height={500}
             alt="wheel of fortune image"

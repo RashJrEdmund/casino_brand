@@ -37,9 +37,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
 
-        <main className="w-full h-fit">
+        <>
           {children}
-        </main>
+        </>
 
         <Footer />
       </body>

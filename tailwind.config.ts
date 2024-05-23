@@ -25,6 +25,7 @@ const config: Config = {
         "app-purple": {
           500: "var(--app-purple-500)",
           400: "var(--app-purple-400)",
+          200: "var(--app-purple-200)",
         },
       },
       spacing: {

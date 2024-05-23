@@ -2,19 +2,21 @@ import { Button } from "@/components/atoms/Button";
 import Banner from "./banner/banner";
 import About from "./about/about";
 import TopGames from "./top-games/top-games";
+import Pricing from "./pricing/pricing";
+import Testimonials from "./testimonials/testimonials";
 
 export function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-start">
+    <main className="w-full h-fit min-h-screen flex flex-col items-center justify-start">
       <Banner />
 
       <About />
 
       <TopGames />
 
-      {/* <Button className="w-full md:max-w-[450px] mt-4">
-        Play Now!
-      </Button> */}
-    </div>
+      <Pricing />
+
+      <Testimonials />
+    </main>
   );
 }

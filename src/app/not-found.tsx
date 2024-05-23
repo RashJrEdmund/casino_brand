@@ -15,7 +15,7 @@ export default function NotFound() {
       <h2 className="font-semibold">Page not found</h2>
 
       <Button>
-        <Link href='/'>
+        <Link href="/">
           go home
         </Link>
       </Button>

@@ -2,7 +2,7 @@ import { ImageLogo } from "@/components/atoms/ImgLogo";
 import Link from "next/link";
 
 export default function Navbar() {
-  const NavBarList = ["Home", "About", "Games", "Testimonials"].map((list) => ({
+  const NavBarList = ["Home", "About", "Games", "Pricing", "Testimonials"].map((list) => ({
     href: "/" + (list === "Home" ? "" : list).toLowerCase(),
     text: list,
   }));
