@@ -10,7 +10,7 @@
       "eol-last": ["warn", "always"],
       "no-unused-vars": ["warn"],
       "no-unused-expressions": ["warn"],
-      "no-multiple-empty-lines": ["error", { "max": 1 }],
+      "no-multiple-empty-lines": ["warn", { "max": 1 }],
       "no-trailing-spaces": ["warn"]
   }
 }

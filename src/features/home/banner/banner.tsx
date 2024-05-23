@@ -28,7 +28,7 @@ function MoreCTA() {
         ))
       }
     </div>
-  )
+  );
 }
 
 export default function Banner() {
@@ -62,5 +62,5 @@ export default function Banner() {
 
       <MoreCTA />
     </div>
-  )
+  );
 }

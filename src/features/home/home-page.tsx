@@ -1,4 +1,3 @@
-import { Button } from "@/components/atoms/Button";
 import Banner from "./banner/banner";
 import About from "./about/about";
 import TopGames from "./top-games/top-games";

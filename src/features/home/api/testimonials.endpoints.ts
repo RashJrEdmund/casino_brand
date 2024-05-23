@@ -18,8 +18,26 @@ const TestimonialDummyData: Testimony[] = [
     name: "Madara Uchiha",
     favoriteGamer: "Poker",
     expression: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat nostrum vero suscipit amet labore eligendi, eaque dolorum delectus deleniti exercitationem!",
-    rating: 5,
+    rating: 4,
     updatedAt: "7 hours ago",
+  },
+  {
+    id: "3",
+    profilePic: APP_PROFILES.tanjiro,
+    name: "Tanjiro",
+    favoriteGamer: "Poker",
+    expression: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat nostrum vero suscipit amet labore eligendi, eaque dolorum delectus deleniti exercitationem!",
+    rating: 5,
+    updatedAt: "17 hours ago",
+  },
+  {
+    id: "4",
+    profilePic: APP_PROFILES.levi,
+    name: "Levi Ackerman",
+    favoriteGamer: "Wheel of fortune",
+    expression: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat nostrum vero suscipit amet labore eligendi, eaque dolorum delectus deleniti exercitationem!",
+    rating: 5,
+    updatedAt: "1 day ago",
   }
 ];
 

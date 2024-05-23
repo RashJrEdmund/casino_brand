@@ -16,6 +16,9 @@ const APP_ICONS = {
 const APP_PROFILES = {
   aang: "/profiles/aang.jpg",
   madara: "/profiles/madara.jpg",
+  tanjiro: "/profiles/tanjiro.jpg",
+  levi: "/profiles/captain-levi.jpg",
+
 };
 
 export {

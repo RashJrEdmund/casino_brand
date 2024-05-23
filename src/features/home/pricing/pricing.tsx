@@ -6,7 +6,7 @@ const features = [
   "Customizable game timer",
   "Editable Score averaging",
   "Printable results Page",
-]
+];
 
 const PriceTiers: Pricing[] = [
   {
@@ -27,8 +27,7 @@ const PriceTiers: Pricing[] = [
     term: "per month",
     features,
   }
-]
-
+];
 
 export default function Pricing() {
   return (
