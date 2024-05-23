@@ -15,11 +15,19 @@
   --app-red-500: #cc2131;
   --app-purple-500: #3e0f36;
   --app-purple-400: #35082b;
+  /* --shimmer-gray: #cfc6c69f; */
 
   /* TAILWIND EXTENSION OF SPACING */
 
   --app-max-w: 1900px;
-  --app-dynamic-max-w: min(var(--app-max-w), 97vw);
+  --app-dynamic-max-w: min(var(--app-max-w), 90vw);
+  --app-section-min-w: min(60vh, 1000px);
+}
+
+@media only screen and (max-width: 1300px) {
+  :root {
+    --app-dynamic-max-w: min(var(--app-max-w), 97vw);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -64,9 +72,4 @@ button {
   cursor: pointer;
   border: none;
   background: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
