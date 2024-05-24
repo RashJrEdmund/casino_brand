@@ -24,6 +24,20 @@ Now, run the development server with:
 npm run dev
 ```
 
+To, run the development tests with with jest, run:
+
+```bash
+npm run test
+# or
+npm run test:watch # in watch mode
+```
+
+### I'm currently running tests only for
+
+- The Banner section,
+- The About section and,
+- The Testimonials section
+
 ## Live vercel deployment
 
 [Casino brand](https://casino-brand.vercel.app/)
