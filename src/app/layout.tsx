@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Footer, Navbar } from "@/components/molecules";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     type: "website",
-    description: "Casino home page. A take home assessment",
+    description: "Casino home page. A take home assessment for a casino brand",
     siteName: "Casino brand",
     title: "Casino brand",
   },
@@ -33,7 +34,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar />
+
+        <>
+          {children}
+        </>
+
+        <Footer />
+      </body>
     </html>
   );
 }

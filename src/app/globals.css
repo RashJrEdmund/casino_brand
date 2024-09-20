@@ -2,34 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   /* --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255; */
 
+  --text: #fff;
+
   /* TAILWIND EXTENSION OF COLORS */
 
   --app-gold-500: #feaf0f;
   --app-red-500: #cc2131;
-  --app-purple-500: #3e0f36;
+  --app-purple-500: #521848;
+  --app-purple-400: #35082b;
+  --app-purple-200: #35082b7c;
+  /* --shimmer-gray: #cfc6c69f; */
+
+  /* TAILWIND EXTENSION OF SPACING */
+
+  --app-max-w: 1900px;
+  --app-dynamic-max-w: min(var(--app-max-w), 90vw);
+  --app-section-min-h: min(60vh, 1000px);
+}
+
+@media only screen and (max-width: 1000px) {
+  :root {
+    --app-section-min-h: 35vh;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  :root {
+    --app-dynamic-max-w: min(var(--app-max-w), 90vw);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
   /* :root {
     --foreground-rgb: 255, 255, 255;
+    --text: #fff;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   } */
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  color: var(--text);
+  background-color: var(--app-purple-400);
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
 }
 
 @layer utilities {
@@ -50,8 +79,8 @@ a {
   cursor: pointer;
 }
 
-/* button {
+button {
   cursor: pointer;
   border: none;
   background: none;
-} */
+}

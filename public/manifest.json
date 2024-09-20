@@ -1,7 +1,7 @@
 {
     "name": "Casino brand",
     "short_name": "Casino brand",
-    "description": "Casino home page. A take home assessment",
+    "description": "Casino home page. A take home assessment for a casino brand",
     "theme_color": "#3e0f36",
     "background_color": "#3e0f36",
     "start_url": "/",
