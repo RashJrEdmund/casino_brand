@@ -1,7 +1,7 @@
 import { getTestimonials } from "../api/testimonial-data";
 import { Testimonial } from "./testimonial";
 
-export default async function Testimonials() {
+export default function Testimonials() {
   const testimonials = getTestimonials();
 
   return (
